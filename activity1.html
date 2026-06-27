@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>My Magic Word Lab</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+
+            background: lightyellow;
+
+        }
+
+        h1,
+
+        h3 {
+
+            color: darkorange;
+
+        }
+
+        .box {
+
+            background: white;
+
+            color: darkorange;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1 class="mb-1">My Magic World Lab</h1>
+        <P class="text-muted mb-4">Discover types, switch them, find and swap words, and catch sneaky errors!</P>
+        <!-- TOPIC 1: typeof -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">What Is It?</h3>
+                <button class="btn btn-warning" onclick="checkTypes()">Reveal The Types!</button>
+                <div id="typeResult" class="box p-3 mt-3 rounded">Press The Button To Reveal The Secret Types!</div>
+             </div>
+        </div>
+    </div>
+    <script>
+        function checkTypes() {
+            document.getElementById("typeResult").innerText =
+                 "Score 42         - type: " + typeof 42 +
+                 "\n" +        
+                 "Name 'Alex'      - type: " + typeof "Alex" +
+                 "\n" +
+                 "Game over true   - type: " + typeof true 
+        }
+        <!-- TOPIC 2 : String() and Number() -->
+        <div class="card mb-4">
+             <div class="card-body">
+                <h3 class="card-title">Switch the Type </h3>
+                <input id="numIn" class="form-control mb-2" placeholder="Type any number here (try: 42)">
+                <button class="btn btn-warning mr-2"
+                onclick="toStr()">Turn into Text</button>
+                </div>
+                </div>
+             
+    </script>
+</body>
