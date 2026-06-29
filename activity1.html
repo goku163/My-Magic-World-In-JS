@@ -45,7 +45,27 @@
                 <div id="typeResult" class="box p-3 mt-3 rounded">Press The Button To Reveal The Secret Types!</div>
              </div>
         </div>
-    </div>
+        <!-- TOPIC 2 : String() and Number() -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">Switch the Type </h3>
+                <input id="numIn" class="form-control mb-2" placeholder="Type any number here (try: 42)">
+                <button class="btn btn-warning mr-2" onclick="toStr()">Turn into Text</button>
+                <button class="btn btn-warning mr-2" onclick="toNum()">Turn into Number</button>
+                <div id="convResult" class="p-3 mt-3 rounded">Type a number above than press a button</div>
+
+        
+                
+            </div>
+        </div>
+        <!-- TOPIC 3: search() and replace() -->
+         <div class="card-body">
+            <h3 class="card-title">Find and swap a word</h3>
+            <input id="findW" class="form-control mb-2" placeholder="word to find(try: dragon)">
+            <button class="btn btn-warning mr-2" onclick="doSearch()">Find It</button>
+            <button class="btn btn-warning mr-2" onclick="doReplace()">Swap It</button>
+            
+         </div>    </div>
     <script>
         function checkTypes() {
             document.getElementById("typeResult").innerText =
@@ -53,17 +73,22 @@
                  "\n" +        
                  "Name 'Alex'      - type: " + typeof "Alex" +
                  "\n" +
-                 "Game over true   - type: " + typeof true 
+                 "Game over true   - type: " + typeof true ;
         }
-        <!-- TOPIC 2 : String() and Number() -->
-        <div class="card mb-4">
-             <div class="card-body">
-                <h3 class="card-title">Switch the Type </h3>
-                <input id="numIn" class="form-control mb-2" placeholder="Type any number here (try: 42)">
-                <button class="btn btn-warning mr-2"
-                onclick="toStr()">Turn into Text</button>
-                </div>
-                </div>
+
+        function toStr()
+        {
+
+            var v = document.getElementById("numIn").value;
+            document.getElementById("convResult").innerHTML = "String(" + v +") = '" + String(v) + "' - now it is a: " + typeof String(v);
+        }
+        function toNum() 
+        {
+
+             var v = document.getElementById("numIn").value;
+            document.getElementById("convResult").innerHTML = "Number(" + v + ") = '" + Number(v) + "' - now it is a: " + typeof Number(v);
+        }
+        
              
     </script>
 </body>
